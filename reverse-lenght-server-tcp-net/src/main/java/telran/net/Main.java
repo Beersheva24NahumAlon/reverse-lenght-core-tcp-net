@@ -9,7 +9,7 @@ public class Main {
             String requestData = request.requestData();
             ResponseCode responseCode = ResponseCode.OK;
             String responseData = switch (request.requestType()) {
-                case "reverse" -> new StringBuilder(requestData).reverse().toString();  
+                case "reverse" -> new StringBuilder(requestData).reverse().toString();
                 case "length" -> String.valueOf(requestData.length());
                 default -> {
                     responseCode = ResponseCode.WRONG_TYPE;
